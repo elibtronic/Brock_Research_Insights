@@ -92,6 +92,26 @@ def page_green_pathways():
 	
 	""")
 		
+def page_reading_list():
+	st.write("""
+	
+	Looking at research metrics requires some nuance. There is no clear consensus on what measures to pay attention to, or which ones provide an honest assement of research output. Lots has been said on these topics. Please consult the following readings to explore these discussions:
+		
+	""")
+	
+	st.markdown("""
+	
+	|   | 
+	|---|
+	|Cantrell MH, Caldwell R, Mezick JA, Estill M, Collister LB (2026) “The system is obviously bonkers”: The APC Trap and the bind of scholarly publishing across four research intensive institutions in the U.S.. _PLOS ONE_ 21(7): e0351430. [https://doi.org/10.1371/journal.pone.0351430](https://doi.org/10.1371/journal.pone.0351430)    |
+	|Ribaric, T. & Moorhead, E. (2026). Constructing a (Meaningful) Scholarly Publishing Narrative: Bootstrapping Green Open Access Submissions for Open Access Week. _Journal of Librarianship and Scholarly Communication_, 14(1), eP21406. https://doi.org/10.31274/jlsc.21406    |
+	|Gingras, Y. (2016). Bibliometrics and research evaluation : uses and abuses. The MIT Press. [Catalogue Link](https://ocul-bu.primo.exlibrisgroup.com/permalink/01OCUL_BU/1355ikl/alma991009282093205152) |
+	
+	""")
+
+
+	
+		
 df = get_data()
 
 st.image("images/logo.png")
@@ -99,7 +119,8 @@ pg = st.navigation([
 	st.Page(page_intro, title="Brock Research Insights"),
 	st.Page(page_total,title="Total Publications",icon="📘"),
 	st.Page(page_apc,title="Article Processing Charges",icon="💲"),
-	st.Page(page_green_pathways,title="Green Pathways", icon="📗")
+	st.Page(page_green_pathways,title="Green Pathways", icon="📗"),
+	st.Page(page_reading_list, title="Reading List", icon="📑")
 ])
 
 pg.run()
